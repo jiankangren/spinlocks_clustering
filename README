@@ -1,0 +1,15 @@
+There are several programs in this folder:
+- taskgen_wlocks.py is a script to generate synchronous task sets with critical sections.
+gen_$(CORE_NUM)cores.sh is used to generate task sets for a specific number of cores with 
+varying parameter sets.
+
+- scheduler is a program which performs core assignment to tasks of a task set. Specifically, 
+it transforms a .rtpt file to a couple of .rtps files for FIFO and PRIO locks respectively.
+Script sched_$(CORE_NUM)cores.sh is used to partition a bunch of .rtpt files.
+
+- clustering_launcher_wlocks is a program which launches the synthetic tasks. For 12 cores, 
+we can launch multiple task sets at once (often 3 task sets). To do so, launch:
+clustering_launcher_wlocks, clustering_launcher_wlocks2, clustering_launcher_wlocks3 instead 
+of launching 3 instances of clustering_launcher_wlocks. This is because we will need 3 
+distinct shared memory regions for the 3 task sets.
+Script run_cluster_$(CORE_NUM)cores.sh can be used to launch multiple task sets one-by-one.

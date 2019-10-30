@@ -1,0 +1,143 @@
+============ UNCONTENDED OVERHEAD ===========
+[son@austen overhead_measurements]$ ./ticket_uncontended 
+Maximum overhead: 14905 ns
+Minimum overhead: 250 ns
+Mean overhead: 252 ns
+[son@austen overhead_measurements]$ ./ticket_uncontended 
+Maximum overhead: 15801 ns
+Minimum overhead: 251 ns
+Mean overhead: 253 ns
+[son@austen overhead_measurements]$ ./ticket_uncontended 
+Maximum overhead: 14236 ns
+Minimum overhead: 250 ns
+Mean overhead: 252 ns
+
+
+============ CONTENDED OVERHEAD =============
+
+[son@austen overhead_measurements]$ ./ticket_contended 2
+Time to run on a single CPU: 723307 ns
+Total time on thread 1: 47988487 ns
+Total time on thread 0: 47952653 ns
+Time to run on multiple threads: 95941140 ns
+Average overhead per critical section: 476 ns
+[son@austen overhead_measurements]$ ./ticket_contended 4
+Time to run on a single CPU: 1438520 ns
+Total time on thread 1: 185038099 ns
+Total time on thread 3: 185323551 ns
+Total time on thread 0: 185300001 ns
+Total time on thread 2: 185314195 ns
+Time to run on multiple threads: 740975846 ns
+Average overhead per critical section: 1848 ns
+[son@austen overhead_measurements]$ ./ticket_contended 8
+Time to run on a single CPU: 2796018 ns
+Total time on thread 1: 711412623 ns
+Total time on thread 0: 712366006 ns
+Total time on thread 2: 712411616 ns
+Total time on thread 3: 712316279 ns
+Total time on thread 7: 712419654 ns
+Total time on thread 5: 712347689 ns
+Total time on thread 4: 712331838 ns
+Total time on thread 6: 712477800 ns
+Time to run on multiple threads: 5698083505 ns
+Average overhead per critical section: 7119 ns
+[son@austen overhead_measurements]$ ./ticket_contended 12
+Time to run on a single CPU: 4117988 ns
+Total time on thread 0: 1484439926 ns
+Total time on thread 2: 1486158090 ns
+Total time on thread 3: 1486267404 ns
+Total time on thread 4: 1486205746 ns
+Total time on thread 5: 1485970648 ns
+Total time on thread 6: 1486441360 ns
+Total time on thread 7: 1486415569 ns
+Total time on thread 8: 1486208016 ns
+Total time on thread 9: 1486450862 ns
+Total time on thread 1: 1486339507 ns
+Total time on thread 10: 1486320188 ns
+Total time on thread 11: 1486292685 ns
+Time to run on multiple threads: 17833510001 ns
+Average overhead per critical section: 14857 ns
+[son@austen overhead_measurements]$ ./ticket_contended 16
+Time to run on a single CPU: 5659947 ns
+Total time on thread 1: 3276069593 ns
+Total time on thread 2: 3285153666 ns
+Total time on thread 3: 3285364535 ns
+Total time on thread 0: 3285029637 ns
+Total time on thread 4: 3285290400 ns
+Total time on thread 5: 3284893230 ns
+Total time on thread 6: 3286016388 ns
+Total time on thread 8: 3285895441 ns
+Total time on thread 13: 3285118574 ns
+Total time on thread 10: 3286084753 ns
+Total time on thread 11: 3285950079 ns
+Total time on thread 12: 3285260961 ns
+Total time on thread 15: 3285112811 ns
+Total time on thread 14: 3285270878 ns
+Total time on thread 7: 3286121356 ns
+Total time on thread 9: 3285837119 ns
+Time to run on multiple threads: 52558469421 ns
+Average overhead per critical section: 32845 ns
+[son@austen overhead_measurements]$ ./ticket_contended 24
+Time to run on a single CPU: 8409166 ns
+Total time on thread 1: 7783275187 ns
+Total time on thread 0: 7878462009 ns
+Total time on thread 2: 7878322443 ns
+Total time on thread 3: 7877913614 ns
+Total time on thread 4: 7877626384 ns
+Total time on thread 5: 7876814467 ns
+Total time on thread 6: 7880144002 ns
+Total time on thread 8: 7879388887 ns
+Total time on thread 13: 7880103466 ns
+Total time on thread 10: 7878409522 ns
+Total time on thread 17: 7878198804 ns
+Total time on thread 11: 7878209611 ns
+Total time on thread 15: 7879770953 ns
+Total time on thread 14: 7881449761 ns
+Total time on thread 16: 7880013240 ns
+Total time on thread 7: 7878998341 ns
+Total time on thread 12: 7882062436 ns
+Total time on thread 18: 7879005828 ns
+Total time on thread 19: 7878749199 ns
+Total time on thread 20: 7880502878 ns
+Total time on thread 21: 7880382288 ns
+Total time on thread 23: 7879704265 ns
+Total time on thread 22: 7880462614 ns
+Total time on thread 9: 7879222678 ns
+Time to run on multiple threads: 189007192877 ns
+Average overhead per critical section: 78749 ns
+[son@austen overhead_measurements]$ ./ticket_contended 32
+Time to run on a single CPU: 10809558 ns
+Total time on thread 0: 14748317637 ns
+Total time on thread 2: 14854799070 ns
+Total time on thread 3: 14854618074 ns
+Total time on thread 4: 14852796416 ns
+Total time on thread 5: 14855234847 ns
+Total time on thread 7: 14849685533 ns
+Total time on thread 6: 14846528742 ns
+Total time on thread 9: 14861506749 ns
+Total time on thread 10: 14848372705 ns
+Total time on thread 8: 14850589388 ns
+Total time on thread 11: 14848173595 ns
+Total time on thread 12: 14857726333 ns
+Total time on thread 13: 14857101453 ns
+Total time on thread 14: 14856260651 ns
+Total time on thread 22: 14841286129 ns
+Total time on thread 20: 14842829956 ns
+Total time on thread 1: 14857586194 ns
+Total time on thread 27: 14853094431 ns
+Total time on thread 28: 14855348887 ns
+Total time on thread 16: 14853892823 ns
+Total time on thread 23: 14842836574 ns
+Total time on thread 18: 14849337237 ns
+Total time on thread 25: 14855657572 ns
+Total time on thread 19: 14849587745 ns
+Total time on thread 26: 14855315779 ns
+Total time on thread 21: 14843251927 ns
+Total time on thread 29: 14850363021 ns
+Total time on thread 31: 14845011952 ns
+Total time on thread 30: 14845186937 ns
+Total time on thread 17: 14851947013 ns
+Total time on thread 15: 14855116876 ns
+Total time on thread 24: 14858466639 ns
+Time to run on multiple threads: 475147828885 ns
+Average overhead per critical section: 148480 ns

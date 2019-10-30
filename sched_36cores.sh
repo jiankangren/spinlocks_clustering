@@ -1,0 +1,20 @@
+#!/bin/bash
+
+PROC_NUM=36
+TOTAL_UTIL=0.5
+
+for num_res in 1
+do
+	for num_req in 128 256 384 512 640 768 896 1024
+	do
+		path='ecrts_data/core='${PROC_NUM}'util='${TOTAL_UTIL}'resources='${num_res}'requests='${num_req}'type=mod'
+		for i in {1..200}
+		do
+			file=${path}'/taskset'${i}'.rtpt'
+			./scheduler ${file} fifo
+			./scheduler ${file} prio
+		done
+	done
+done
+
+echo "Finished!"

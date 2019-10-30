@@ -1,0 +1,143 @@
+============= UNCONTENDED OVERHEAD ==============
+
+[son@austen overhead_measurements]$ ./prio_uncontended 
+Maximum overhead: 20172 ns
+Minimum overhead: 273 ns
+Mean overhead: 275 ns
+[son@austen overhead_measurements]$ ./prio_uncontended 
+Maximum overhead: 24521 ns
+Minimum overhead: 273 ns
+Mean overhead: 277 ns
+[son@austen overhead_measurements]$ ./prio_uncontended 
+Maximum overhead: 15161 ns
+Minimum overhead: 272 ns
+Mean overhead: 275 ns
+
+
+============= CONTENDED OVERHEAD =============
+[son@austen overhead_measurements]$ ./prio_contended 2
+Time to run on a single CPU: 718739 ns
+Total time on thread 0: 23826992 ns
+Total time on thread 1: 27174372 ns
+Time to run on multiple threads: 51001364 ns
+Average overhead per critical section: 251 ns
+[son@austen overhead_measurements]$ ./prio_contended 4
+Time to run on a single CPU: 1425338 ns
+Total time on thread 0: 81279429 ns
+Total time on thread 1: 83294725 ns
+Total time on thread 2: 84372592 ns
+Total time on thread 3: 84367145 ns
+Time to run on multiple threads: 333313891 ns
+Average overhead per critical section: 829 ns
+[son@austen overhead_measurements]$ ./prio_contended 8
+Time to run on a single CPU: 2891289 ns
+Total time on thread 0: 150068035 ns
+Total time on thread 1: 162705285 ns
+Total time on thread 2: 181272783 ns
+Total time on thread 3: 205496495 ns
+Total time on thread 4: 228845000 ns
+Total time on thread 5: 264412729 ns
+Total time on thread 6: 280631375 ns
+Total time on thread 7: 281588400 ns
+Time to run on multiple threads: 1755020102 ns
+Average overhead per critical section: 2190 ns
+[son@austen overhead_measurements]$ ./prio_contended 12
+Time to run on a single CPU: 4315407 ns
+Total time on thread 0: 502390193 ns
+Total time on thread 1: 650057307 ns
+Total time on thread 2: 754216068 ns
+Total time on thread 3: 869478118 ns
+Total time on thread 4: 943490925 ns
+Total time on thread 5: 1012677436 ns
+Total time on thread 6: 1014012983 ns
+Total time on thread 7: 1049806576 ns
+Total time on thread 8: 1063658401 ns
+Total time on thread 9: 1071803431 ns
+Total time on thread 10: 1076442695 ns
+Total time on thread 11: 1076704426 ns
+Time to run on multiple threads: 11084738559 ns
+Average overhead per critical section: 9233 ns
+[son@austen overhead_measurements]$ ./prio_contended 16
+Time to run on a single CPU: 5776768 ns
+Total time on thread 0: 299083873 ns
+Total time on thread 1: 344293533 ns
+Total time on thread 2: 393973608 ns
+Total time on thread 3: 465106471 ns
+Total time on thread 4: 543832583 ns
+Total time on thread 5: 655208775 ns
+Total time on thread 6: 901675295 ns
+Total time on thread 7: 1065123417 ns
+Total time on thread 8: 1210328971 ns
+Total time on thread 9: 1331732719 ns
+Total time on thread 10: 1420195695 ns
+Total time on thread 12: 1441712112 ns
+Total time on thread 13: 1465679419 ns
+Total time on thread 11: 1466890218 ns
+Total time on thread 14: 1474564037 ns
+Total time on thread 15: 1475382186 ns
+Time to run on multiple threads: 15954782912 ns
+Average overhead per critical section: 9968 ns
+[son@austen overhead_measurements]$ ./prio_contended 24
+Time to run on a single CPU: 8488992 ns
+Total time on thread 0: 1131969246 ns
+Total time on thread 1: 1497740257 ns
+Total time on thread 2: 1747736167 ns
+Total time on thread 3: 2012218416 ns
+Total time on thread 4: 2282576518 ns
+Total time on thread 5: 2457602485 ns
+Total time on thread 6: 2512012039 ns
+Total time on thread 7: 2641894985 ns
+Total time on thread 8: 2720046041 ns
+Total time on thread 9: 2784528146 ns
+Total time on thread 10: 2841349210 ns
+Total time on thread 11: 2883207969 ns
+Total time on thread 12: 2892672633 ns
+Total time on thread 13: 2926589871 ns
+Total time on thread 14: 2963105790 ns
+Total time on thread 15: 2999247151 ns
+Total time on thread 16: 3042181316 ns
+Total time on thread 18: 3047756122 ns
+Total time on thread 19: 3061283885 ns
+Total time on thread 17: 3070114217 ns
+Total time on thread 20: 3071795322 ns
+Total time on thread 21: 3075245465 ns
+Total time on thread 22: 3077049012 ns
+Total time on thread 23: 3077576708 ns
+Time to run on multiple threads: 63817498971 ns
+Average overhead per critical section: 26587 ns
+[son@austen overhead_measurements]$ ./prio_contended 32
+Time to run on a single CPU: 11534900 ns
+Total time on thread 0: 533637572 ns
+Total time on thread 1: 707865694 ns
+Total time on thread 2: 874225772 ns
+Total time on thread 3: 1062745268 ns
+Total time on thread 4: 1319044767 ns
+Total time on thread 5: 1634798399 ns
+Total time on thread 6: 2378175305 ns
+Total time on thread 7: 2813374908 ns
+Total time on thread 8: 3191695567 ns
+Total time on thread 9: 3552693503 ns
+Total time on thread 10: 3796069631 ns
+Total time on thread 12: 3898431624 ns
+Total time on thread 11: 3983096317 ns
+Total time on thread 13: 4015185823 ns
+Total time on thread 14: 4088256503 ns
+Total time on thread 15: 4142834752 ns
+Total time on thread 16: 4187456027 ns
+Total time on thread 17: 4226542676 ns
+Total time on thread 18: 4359262726 ns
+Total time on thread 19: 4433644451 ns
+Total time on thread 20: 4511861364 ns
+Total time on thread 21: 4587038965 ns
+Total time on thread 22: 4642177062 ns
+Total time on thread 24: 4667556908 ns
+Total time on thread 25: 4694306653 ns
+Total time on thread 23: 4692976479 ns
+Total time on thread 26: 4711315857 ns
+Total time on thread 27: 4723904401 ns
+Total time on thread 28: 4733125526 ns
+Total time on thread 29: 4738031567 ns
+Total time on thread 30: 4749687847 ns
+Total time on thread 31: 4751962236 ns
+Time to run on multiple threads: 115402982150 ns
+Average overhead per critical section: 36059 ns
